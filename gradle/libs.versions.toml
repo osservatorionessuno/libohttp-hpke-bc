@@ -1,0 +1,15 @@
+[versions]
+kotlin = "2.2.10"
+junit = "5.10.2"
+bouncycastle = "1.79"
+libohttp = "0.1.0"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+[libraries]
+# libohttp is resolved from JitPack (com.github.<owner>:<repo>:<tag>).
+libohttp = { module = "com.github.osservatorionessuno:libohttp", version.ref = "libohttp" }
+bouncycastle = { module = "org.bouncycastle:bcprov-jdk18on", version.ref = "bouncycastle" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version = "1.10.2" }
