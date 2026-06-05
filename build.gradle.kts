@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.ktlint)
 }
 
 group = "org.osservatorionessuno"
@@ -32,6 +33,10 @@ dependencies {
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.bouncycastle)
     testRuntimeOnly(libs.junit.platform.launcher)
+}
+
+ktlint {
+    version.set("1.3.1")
 }
 
 tasks.test {

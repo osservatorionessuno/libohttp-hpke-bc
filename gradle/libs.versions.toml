@@ -3,9 +3,11 @@ kotlin = "2.2.10"
 junit = "5.10.2"
 bouncycastle = "1.79"
 libohttp = "0.1.0"
+ktlintPlugin = "12.1.1"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintPlugin" }
 
 [libraries]
 # libohttp is resolved from JitPack (com.github.<owner>:<repo>:<tag>).
