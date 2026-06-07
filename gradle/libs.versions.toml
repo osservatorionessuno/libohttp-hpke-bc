@@ -2,7 +2,7 @@
 kotlin = "2.2.10"
 junit = "5.10.2"
 bouncycastle = "1.79"
-libohttp = "main-SNAPSHOT"
+libohttp = "1.0.0"
 ktlintPlugin = "12.1.1"
 
 [plugins]
