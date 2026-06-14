@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "org.osservatorionessuno"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -28,7 +28,11 @@ kotlin {
 
 dependencies {
     api(libs.libohttp)
-    implementation(libs.bouncycastle)
+    // BouncyCastle is compileOnly: the backend compiles against the BC API but does not impose a
+    // provider variant (bcprov-jdk18on vs bcprov-jdk15to18) on consumers — they supply whichever
+    // BouncyCastle they already ship, which avoids duplicate-class clashes downstream. Tests bring
+    // their own BC below.
+    compileOnly(libs.bouncycastle)
 
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.bouncycastle)
